@@ -6,11 +6,14 @@ const app = express()
 
 // defino middleware (hago fetch a la api /user)
 
-const middleware = (req, res, next) => {
+const middleware = async (req, res, next) => {
     const code = Number(req.params.code)
-    //fetch
-    const user = response.json()
-    user.code
+    const response = await fetch('https://localhost:4321/user')
+    const user = await response.json()
+    if(user.code === code){
+        next()
+    }
+    res.status(400).json({ mensaje: 'The code is incorrect' })
 }
 
 // defino ruta get /:codigo

@@ -1,14 +1,14 @@
 import express from 'express'
 
-const PUERTO = 4321
+const PORT = 4321
 
 const app = express()
 
-app.get('/usuario', (req, res)=>{
-    const usuario = {
-        codigo: 5183
+app.get('/user', (req, res)=>{
+    const user = {
+        code: 5183
     } 
-    res.json(usuario)
+    res.json(user)
 })
 
-app.listen(PUERTO);
+app.listen(PORT);

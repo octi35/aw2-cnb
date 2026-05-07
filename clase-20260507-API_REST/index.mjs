@@ -1,5 +1,7 @@
 import express from 'express'
-import productos from './productos.mjs'
+import { obtenerProductos } from './funciones.mjs'
+
+
 
 const PUERTO = 3000
 
@@ -9,10 +11,7 @@ const app = express()
 
 // Modulo productos
 // GET /api/v1/productos
-app.get('/api/v1/productos', (req, res) => {
-
-    res.json(productos)
-})
+app.get('/api/v1/productos',obtenerProductos)
 
 // GET /api/v1/productos:id
 // app.get('/api/v1/productos:id')

@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "titulo": "The Legend of Zelda: Breath of the Wild",
+        "plataforma": "Nintendo Switch",
+        "genero": "Aventura",
+        "precio": 15000,
+        "año": 2017
+    },
+    {
+        "id": 2,
+        "titulo": "God of War",
+        "plataforma": "PlayStation",
+        "genero": "Acción",
+        "precio": 12000,
+        "año": 2018
+    },
+    {
+        "id": 3,
+        "titulo": "Halo Infinite",
+        "plataforma": "Xbox",
+        "genero": "Shooter",
+        "precio": 10000,
+        "año": 2021
+    },
+    {
+        "id": 4,
+        "titulo": "Super Mario Odyssey",
+        "plataforma": "Nintendo Switch",
+        "genero": "Plataformas",
+        "precio": 13000,
+        "año": 2017
+    },
+    {
+        "id": 5,
+        "titulo": "The Last of Us Part II",
+        "plataforma": "PlayStation",
+        "genero": "Aventura",
+        "precio": 11000,
+        "año": 2020
+    },
+    {
+        "id": 6,
+        "titulo": "Forza Horizon 5",
+        "plataforma": "Xbox",
+        "genero": "Carreras",
+        "precio": 9000,
+        "año": 2021
+    },
+    {
+        "id": 7,
+        "titulo": "Elden Ring",
+        "plataforma": "PlayStation",
+        "genero": "RPG",
+        "precio": 14000,
+        "año": 2022
+    },
+    {
+        "id": 8,
+        "titulo": "Mario Kart 8 Deluxe",
+        "plataforma": "Nintendo Switch",
+        "genero": "Carreras",
+        "precio": 8000,
+        "año": 2017
+    }
+]

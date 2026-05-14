@@ -1,0 +1,17 @@
+{
+  "name": "parcial-aw2",
+  "version": "1.0.0",
+  "description": "Parcial 1 Aplicaciones Web 2",
+  "main": "index.mjs",
+  "scripts": {
+    "dev": "node --watch index.mjs",
+    "start": "node index.mjs"
+  },
+  "keywords": [],
+  "author": "Santiago Morán",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "5.2.1"
+  }
+}

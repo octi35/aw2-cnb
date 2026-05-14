@@ -1,4 +1,4 @@
-import express, { urlencoded } from 'express'
+import express from 'express'
 
 const PORT = 3000
 
@@ -10,6 +10,7 @@ const middleware = async (req, res, next) => {
     const code = Number(req.params.code)
     const response = await fetch('https://localhost:4321/user')
     const user = await response.json()
+    
     if(user.code === code){
         next()
     }

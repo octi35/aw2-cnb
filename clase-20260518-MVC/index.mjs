@@ -1,5 +1,5 @@
 import express from 'express'
-import rutasProductos from './rutas.mjs'
+import rutasProductos from './modulos/productos/rutas.productos.mjs'
 
 
 const PUERTO = 3000

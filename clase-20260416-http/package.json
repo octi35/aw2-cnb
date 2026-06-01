@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/santimoran19/aw2-cnb.git"
+    "url": "git+https://github.com/octi35/aw2-cnb.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/santimoran19/aw2-cnb/issues"
+    "url": "https://github.com/octi35/aw2-cnb/issues"
   },
-  "homepage": "https://github.com/santimoran19/aw2-cnb#readme"
+  "homepage": "https://github.com/octi35/aw2-cnb#readme"
 }

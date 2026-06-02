@@ -1,0 +1,17 @@
+{
+  "name": "padelygol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "dev": "node --env-file=.env --watch index.mjs",
+    "start": "node --env-file=.env index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "5.2.1",
+    "pg": "8.21.0"
+  }
+}

@@ -1,14 +1,14 @@
 import express from 'express'
-import rutasProductos from './modulos/productos/rutas.productos.mjs'
-
+import rutasCanchas from './modulos/productos/rutas.productos.mjs'
+import rutasReservas from './modulos/reservas/rutas.reservas.mjs'
 
 const PUERTO = 3000
 
 const app = express()
 
-app.use(rutasProductos)
+app.use(express.json())
 
-// Configurar un API REST básica
+app.use(rutasCanchas)
+app.use(rutasReservas)
 
-
-app.listen(PUERTO)
+app.listen(PUERTO, () => console.log(`Servidor corriendo en http://localhost:${PUERTO}`))

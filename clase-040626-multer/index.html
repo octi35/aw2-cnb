@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aprender Multer</title>
+</head>
+<body>
+  <h1>Subida </h1>
+  <p>guardar img o txtt.</p>
+
+  <!-- Formulario sencillo -->
+  <form id="miFormulario" enctype="multipart/form-data">
+    <label>1. Elegí un archivo:</label><br>
+    <!-- Tiene name="file" porque el servidor hace upload.single('file') -->
+    <input type="file" name="file" required /><br><br>
+
+    <label>2. Poné una etiqueta:</label><br>
+    <!-- Los textos viajan en req.body gracias a Multer -->
+    <input type="text" name="tag" placeholder="Una etiqueta piola..." /><br><br>
+
+    <button type="submit">¡Subir archivo!</button>
+  </form>
+
+  <!-- Acá mostramos el cartelito con el resultado -->
+  <div id="resultadoHTML" style="margin-top:20px; font-weight:bold;"></div>
+
+  <script>
+    // Agarro los elementos para usarlos
+    const formulario = document.getElementById('miFormulario');
+    const resultadoHTML = document.getElementById('resultadoHTML');
+
+    // Cuando apretás el botón de "¡Subir archivo!"
+    formulario.addEventListener('submit', async (evento) => {
+      // Evito que la página recargue entera
+      evento.preventDefault();
+      
+      // FormData empaqueta todo: la imagen y la etiqueta
+      const datosDelForm = new FormData(formulario);
+      
+      resultadoHTML.innerText = 'Subiendo...........';
+
+      try {
+        // Le mandamos los datos al backend (a la ruta /upload con método POST)
+        const peticion = await fetch('/upload', { method: 'POST', body: datosDelForm });
+        const respuestaServidor = await peticion.json();
+
+        if (!peticion.ok) {
+          throw new Error(respuestaServidor.error || ' error general');
+        }
+
+        // Si todo salió bien, dibujamos lo que volvió del servidor
+        resultadoHTML.innerHTML = `
+           ${respuestaServidor.mensaje} <br>
+           Original: ${respuestaServidor.archivoOriginal} <br>
+           Guardado: ${respuestaServidor.archivoGuardado} <br>
+           Etiqueta devuelta: ${respuestaServidor.etiqueta}
+        `;
+      } catch (error) {
+        resultadoHTML.innerText = '¡Error! ' + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
